@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Rock+Salt&display=swap");
+
+* {
+	font-family: "Anta", sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	transition: 0.4s linear;
+}
+body {
+	background-color: rgb(194, 165, 131);
+}
+
+header {
+	position: relative;
+	top: 0;
+	width: 100%;
+	padding: 20px 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header .logo h1 {
+	position: relative;
+	font-size: 1.5rem;
+	color: bisque;
+}
+header .nav_menu a {
+	text-decoration: none;
+	background-color: white;
+	font-weight: 300;
+	padding: 2px 15px;
+	border: 1px solid black;
+	border-radius: 9px;
+	color: rgb(146, 114, 74);
+}
+
+header .nav_menu a:hover {
+	color: white;
+	background-color: rgb(146, 114, 74);
+	cursor: pointer;
+}
+
+section {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.content {
+	max-width: 600px;
+	margin: 60px 100px;
+}
+
+.content h1 {
+	color: bisque;
+	font-size: 30px;
+	text-transform: uppercase;
+	line-height: 50px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.content h1 span {
+	color: rgb(146, 114, 74);
+	font-size: 40px;
+	transition: scale 0.3s;
+}
+
+.content h1 p {
+	font-size: 15px;
+	font-weight: 500;
+	margin-bottom: 30px;
+}
+
+.content .btn {
+	text-decoration: none;
+	background-color: white;
+	font-weight: 500;
+	margin-top: 30px;
+	padding: 5px 15px;
+	border: 1px solid black;
+	border-radius: 9px;
+	color: rgb(146, 114, 74);
+}
+
+.content .btn:hover {
+	color: white;
+	background-color: rgb(146, 114, 74);
+	box-shadow: -4px 3px 3px rgba(255, 255, 255, 0.596);
+	letter-spacing: 3px;
+	cursor: pointer;
+}
+img {
+	position: absolute;
+	top: 150px;
+	left: 750px;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	width: 40%;
+	border-radius: 200px;
+}
+
+.media-icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 15px;
+	margin-top: 0;
+}
+
+.media-icons a i {
+	position: relative;
+	color: bisque;
+	font-size: 3rem;
+	transition: 0.3s;
+	transition-property: transform;
+}
+
+.media-icons a:not(:last-child) {
+	margin-right: 70px;
+}
+.media-icons a i:hover {
+	transform: scale(1.5);
+}
+
+label {
+	display: none;
+}
+
+#check {
+	z-index: 2;
+	display: none;
+}
+
+/* responsive styles*/
+@media (max-width: 960px) {
+	header .nav_menu {
+		display: none;
+	}
+
+	label {
+		display: block;
+		font-size: 30px;
+		cursor: pointer;
+		transition: 0.3s;
+		transition-property: color;
+	}
+
+	label:hover {
+		color: rgb(146, 114, 74);
+	}
+
+	label .bx-x-circle {
+		display: none;
+	}
+
+	#check:checked ~ header .nav_menu {
+		z-index: 2;
+		position: fixed;
+		background-color: bisque;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#check:checked ~ header .nav_menu a {
+		font-weight: 500;
+		margin-right: 0;
+		margin-bottom: 50px;
+		letter-spacing: 1px;
+	}
+
+	#check:checked ~ header label .bx-menu {
+		display: none;
+	}
+
+	#check:checked ~ header label .bx-x-circle {
+		z-index: 2;
+		display: block;
+		position: fixed;
+	}
+
+	.content h1 {
+		font-size: 45px;
+		line-height: 50px;
+	}
+
+	.content h1 span {
+		font-size: 40px;
+		font-weight: 400;
+	}
+	.content p {
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 560px) {
+	.content h1 {
+		font-size: 40px;
+		line-height: 45px;
+	}
+
+	.content h1 span {
+		font-size: 35px;
+		font-weight: 400;
+	}
+	.content p {
+		font-size: 13px;
+	}
+}
